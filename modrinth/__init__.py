@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf8 -*-
-
-import requests
-from warnings import warn
-
 __version__ = '1.0.0'
 
-LABRINTH_BASE_URL = 'https://api.modrinth.com'
+
+import requests
+
+from .project import *
 
 def getLabrinthVersion() -> str:
     '''
     getLabrinthVersion gets the current online version of the Labrinth API.
+
+    :return: version number as a string.
     '''
 
-    r = requests.get(LABRINTH_BASE_URL + '/')
+    r = requests.get('https://api.modrinth.com')
     return r.json()['version']
