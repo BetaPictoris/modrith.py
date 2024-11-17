@@ -16,7 +16,7 @@ classifiers = [
 ]
 keywords = ["minecraft", "modrinth", "modrinth-api", "labrinth"]
 dependencies = ["requests"]
-requires-python = ">=3.9"
+requires-python = ">=3.11"
 
 [project.optional-dependencies]
 dev = ["black", "bumpver", "isort", "pip-tools", "pytest"]
